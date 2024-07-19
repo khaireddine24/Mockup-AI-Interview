@@ -28,29 +28,29 @@ const reviews = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col overflow-y-hidden">
-      <div className="bg-gray-100 p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">AI Mock Interview Job Preparation</h1>
-        <div className="space-x-4">
+    <div className="min-h-screen flex flex-col">
+      <div className="bg-gray-100 p-4 flex flex-col sm:flex-row justify-between items-center">
+        <h1 className="text-xl font-bold mb-4 sm:mb-0">AI Mock Interview Job Preparation</h1>
+        <div className="space-y-2 sm:space-y-0 sm:space-x-4">
           <Link href={'/dashboard'}>
-            <Button>Sign In</Button>
+            <Button className="w-full sm:w-auto mb-3">Sign In</Button>
           </Link>
           <Link href={'/dashboard'}>
-            <Button>Sign Up</Button>
+            <Button className="w-full sm:w-auto">Sign Up</Button>
           </Link>
         </div>
       </div>
-
-      <div className="flex-grow p-4 overflow-y-hidden">
-        <div className="mb-8 ml-80">
-          <div className="flex items-center justify-between">
-            <div className="max-w-md">
+      
+      <div className="flex-grow p-4 overflow-y-auto">
+        <div className="mb-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="max-w-md mb-4 lg:mb-0">
               <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
               <p>
-              Our platform provides realistic mock interview experiences powered by advanced AI technology. These interviews simulate real-world scenarios, helping you practice and prepare effectively.
+                Our platform provides realistic mock interview experiences powered by advanced AI technology. These interviews simulate real-world scenarios, helping you practice and prepare effectively.
               </p>
               <Link href={'/dashboard'}>
-                <Button className="mt-4">Try Now</Button>
+                <Button className="mt-4 w-full sm:w-auto">Try Now</Button>
               </Link>
             </div>
             <Image
@@ -58,17 +58,17 @@ export default function Home() {
               alt="Why Choose Us"
               width={400}
               height={200}
-              className="rounded-lg mx-72 mb-10"
+              className="rounded-lg w-full max-w-md lg:max-w-lg"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8 mr-80">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
             <StatCard value="95%" label="Success Rate" />
             <StatCard value="500+" label="Mock interviews conducted" />
             <StatCard value="24/7" label="Support availability" />
             <StatCard value="100%" label="job placement" />
           </div>
         </div>
-
+        
         <div>
           <h2 className="text-2xl font-semibold mb-4">Reviews</h2>
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      
       <div className="bg-gray-100 p-4 text-center">
         <p>&copy; 2024 AI Mock Interview Job Preparation By Khaireddine</p>
       </div>
